@@ -18,5 +18,7 @@ public:
   Window(int width, int height, const std::string title);
   ~Window();
 
+  void clear() const;
+  void update() const;
 
 };

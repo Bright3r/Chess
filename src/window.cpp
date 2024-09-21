@@ -34,3 +34,12 @@ Window::~Window() {
 
   SDL_Quit();
 }
+
+void Window::clear() const {
+  SDL_SetRenderDrawColor(this->renderer, 0, 0, 255, 255);
+  SDL_RenderClear(this->renderer);
+}
+
+void Window::update() const {
+  SDL_RenderPresent(this->renderer);
+}
